@@ -2611,10 +2611,11 @@ $.jgrid.extend({
 							$("#"+$.jgrid.jqID(selection), "#"+$.jgrid.jqID(fid)).addClass("ui-state-highlight");
 						}
 						stat = true;
+						$t.p.selrow = pt.id;
 					} else {
 						stat = false;
+						$t.p.selrow = null;
 					}
-					$t.p.selrow = pt.id;
 					if( $t.p.onSelectRow && onsr) { $t.p.onSelectRow.call($t, pt.id, stat, e); }
 				}
 			} else {
